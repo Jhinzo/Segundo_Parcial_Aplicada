@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Segundo_Parcial_Aplicada.BLL
 {
+ 
     public class Utilidades
     {
         public static int ToInt(string valor)
