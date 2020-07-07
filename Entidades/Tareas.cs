@@ -10,7 +10,5 @@ namespace Segundo_Parcial_Aplicada.Entidades
         [Key]
         public int TareaId { get; set; }
         public string TipoTarea { get; set; }
-        public string Requerimiento { get; set; }
-        public int Tiempo { get; internal set; }
     }
 }

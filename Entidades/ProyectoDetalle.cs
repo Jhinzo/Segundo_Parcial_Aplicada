@@ -8,13 +8,10 @@ namespace Segundo_Parcial_Aplicada.Entidades
         [Key]
         public int Id { get; set; }
         public int ProyectoId { get; set; }
-
         public int TareaId { get; set; }
-
-        [ForeignKey("TareaId")]
-        public Tareas tipo { get; set; } = new Tareas();
-
+        public string TipoTarea { get; set; }
         public string Requerimiento { get; set; }
-        public double Tiempo { get; set; }
+        public decimal Tiempo { get; set; }
+
     }
 }

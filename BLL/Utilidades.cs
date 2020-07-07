@@ -9,8 +9,14 @@ namespace Segundo_Parcial_Aplicada.BLL
     {
         public static int ToInt(string valor)
         {
-            int retorno = 0;
+            int retorno;
             int.TryParse(valor, out retorno);
+            return retorno;
+        }
+        public static decimal ToDecimal(string valor)
+        {
+            decimal retorno;
+            decimal.TryParse(valor, out retorno);
             return retorno;
         }
     }

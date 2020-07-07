@@ -8,7 +8,7 @@ using Segundo_Parcial_Aplicada.DAL;
 
 namespace Segundo_Parcial_Aplicada.BLL
 {
-    public class ProyectoBLL
+    public static class ProyectoBLL
     {    
         public static bool Guardar(Proyectos proyectos)
         {
@@ -52,7 +52,7 @@ namespace Segundo_Parcial_Aplicada.BLL
             try
             {
                 
-                contexto.Database.ExecuteSqlRaw($"Delete From ProyectosDetalle Where ProyectosId={proyectos.ProyectoId}");
+                contexto.Database.ExecuteSqlRaw($"Delete From ProyectosDetalle Where ProyectoId={proyectos.ProyectoId}");
 
                 foreach (var item in proyectos.Detalle)
                 {
@@ -61,6 +61,7 @@ namespace Segundo_Parcial_Aplicada.BLL
 
                 contexto.Entry(proyectos).State = EntityState.Modified;
                 paso = contexto.SaveChanges() > 0;
+
             }
             catch (Exception)
             {
@@ -149,8 +150,7 @@ namespace Segundo_Parcial_Aplicada.BLL
             try
             {
                 proyectos = contexto.Proyectos
-                    .Where(p => p.ProyectoId == id)
-                    .Include(p => p.Detalle).ThenInclude(t => t.tipo)
+                    .Where(p => p.ProyectoId == id).Include(x=>x.Detalle)
                     .SingleOrDefault();
             }
             catch (Exception)
