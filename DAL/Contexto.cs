@@ -19,10 +19,10 @@ namespace Segundo_Parcial_Aplicada.DAL
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Tareas>().HasData(new Tareas { TareaId = 1, TipoTarea = "proyecto 1", Requerimiento = "1", Tiempo = 60 });
-            modelBuilder.Entity<Tareas>().HasData(new Tareas { TareaId = 2, TipoTarea = "proyecto 2", Requerimiento = "2", Tiempo = 60 });
-            modelBuilder.Entity<Tareas>().HasData(new Tareas { TareaId = 3, TipoTarea = "Prpyectp 3", Requerimiento = "3", Tiempo = 60 });
-            modelBuilder.Entity<Tareas>().HasData(new Tareas { TareaId = 4, TipoTarea = "Proyecto 4", Requerimiento = "4", Tiempo = 60 });
+            modelBuilder.Entity<Tareas>().HasData(new Tareas { TareaId = 1, TipoTarea = "proyecto 1", Requerimiento = "Uno", Tiempo = 60 });
+            modelBuilder.Entity<Tareas>().HasData(new Tareas { TareaId = 2, TipoTarea = "proyecto 2", Requerimiento = "Dos", Tiempo = 60 });
+            modelBuilder.Entity<Tareas>().HasData(new Tareas { TareaId = 3, TipoTarea = "Prpyectp 3", Requerimiento = "Tres", Tiempo = 60 });
+            modelBuilder.Entity<Tareas>().HasData(new Tareas { TareaId = 4, TipoTarea = "Proyecto 4", Requerimiento = "Cuatro", Tiempo = 60 });
         }
 
         internal void Dispose()
